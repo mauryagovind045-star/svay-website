@@ -111,6 +111,7 @@ button:focus-visible {
 
 .btn {
   display: inline-block;
+  font-family: var(--sans);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -118,8 +119,10 @@ button:focus-visible {
   text-decoration: none;
   color: var(--ivory);
   background: var(--umber);
+  border: 0;
   border-radius: 999px;
   padding: 1.05rem 2.4rem;
+  cursor: pointer;
   transition: background 0.25s ease;
 }
 .btn:hover { background: var(--espresso); }
@@ -128,6 +131,11 @@ button:focus-visible {
    Header
    ================================================================ */
 .site-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -162,26 +170,44 @@ button:focus-visible {
    Hero
    ================================================================ */
 .hero {
-  padding: clamp(1.5rem, 4vh, 3rem) var(--gutter) 0;
+  position: relative;
   text-align: center;
 }
-.hero__eyebrow { margin-bottom: clamp(1.5rem, 4vh, 2.75rem); }
 .hero__media {
-  width: min(620px, 88vw);
-  margin-inline: auto;
-  border-radius: 999px 999px 0 0;
-  overflow: hidden;
+  position: relative;
+  height: clamp(560px, 90vh, 920px);
 }
 .hero__media img {
   width: 100%;
-  height: min(78vh, 760px);
+  height: 100%;
   object-fit: cover;
-  object-position: 50% 38%;
+  object-position: 50% 72%;
+}
+.hero__media::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 10rem;
+  background: linear-gradient(rgba(244, 239, 230, 0.85), rgba(244, 239, 230, 0));
+}
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 8rem;
+  background: linear-gradient(rgba(244, 239, 230, 0), var(--ivory));
+}
+.hero__eyebrow {
+  position: absolute;
+  top: clamp(4.6rem, 9vh, 6.5rem);
+  left: 0;
+  right: 0;
+  z-index: 3;
 }
 .hero__word {
   position: relative;
   z-index: 2;
-  margin-top: calc(-0.52em);
+  margin-top: calc(-0.55em);
   color: var(--umber);
 }
 .hero__tag {
@@ -442,15 +468,72 @@ button:focus-visible {
   margin-top: 1.75rem;
   color: rgba(70, 57, 44, 0.75);
 }
-.contact__actions {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+
+/* Enquiry form */
+.form {
+  max-width: 44rem;
+  margin: 3.5rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem 2.75rem;
+  text-align: left;
 }
-.contact__actions .link-arrow { margin-top: 0; }
+.form__honey { display: none; }
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.7rem;
+  transition: border-color 0.25s ease;
+}
+.field:focus-within { border-color: var(--olive); }
+.field label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+.field input,
+.field select,
+.field textarea {
+  border: 0;
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--umber);
+  padding: 0.15rem 0;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus { outline: none; }
+.field ::placeholder { color: rgba(70, 57, 44, 0.35); }
+.field textarea { resize: vertical; min-height: 5.5rem; }
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%237C6C4E' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.25rem center;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.field--wide { grid-column: 1 / -1; }
+.form__submit {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+.contact__direct {
+  margin-top: 2.75rem;
+  font-size: 0.85rem;
+  color: rgba(70, 57, 44, 0.7);
+}
+.contact__direct a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
 
 /* ================================================================
    Footer
@@ -521,7 +604,9 @@ button:focus-visible {
 
 @media (max-width: 560px) {
   .site-head { flex-direction: column; gap: 0.9rem; }
-  .hero__media img { height: 62vh; }
+  .hero__media { height: min(78vh, 640px); }
+  .hero__eyebrow { top: 8rem; }
+  .form { grid-template-columns: 1fr; gap: 1.9rem; }
   .stage { grid-template-columns: 3rem 1fr; }
   .stage__time { grid-column: 2; }
   .site-foot__cols { grid-template-columns: 1fr; }

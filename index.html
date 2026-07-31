@@ -27,10 +27,10 @@
 
     <!-- ================= HERO ================= -->
     <section class="hero">
-      <p class="eyebrow hero__eyebrow" data-reveal>Interior Design Studio&ensp;—&ensp;Goa&nbsp;·&nbsp;Mumbai</p>
-      <figure class="hero__media" data-reveal>
-        <img src="assets/img/hero.jpg" alt="Double-height living room by Svay Studio — blue sofas, scalloped pendant lights and a dark arched doorway" fetchpriority="high">
+      <figure class="hero__media">
+        <img src="assets/img/hero-banner.jpg" alt="Serene living room by Svay Studio — deep-green sofa, cream armchairs and arched wall panelling in soft daylight" fetchpriority="high">
       </figure>
+      <p class="eyebrow hero__eyebrow">Interior Design Studio&ensp;—&ensp;Goa&nbsp;·&nbsp;Mumbai</p>
       <h1 class="wordmark hero__word" aria-label="Svay">
         <span>S</span><span>V</span><span>A</span><span>Y</span>
       </h1>
@@ -93,7 +93,7 @@
       <div class="section-head" data-reveal>
         <p class="eyebrow">Our projects</p>
         <h2 class="section-title">Rooms with a <em>self</em> of their own</h2>
-        <p class="section-note">Selected work — more on <a href="#" data-instagram>Instagram</a>.</p>
+        <p class="section-note">Selected work — more on <a href="https://www.instagram.com/svay.studio/" target="_blank" rel="noopener">Instagram</a>.</p>
       </div>
       <div class="projects__grid">
         <figure class="tile tile--arch" data-reveal>
@@ -215,11 +215,47 @@
     <!-- ================= CONTACT ================= -->
     <section class="contact" id="contact">
       <h2 class="statement" data-reveal>It begins with the self.<br><em>Let’s begin with yours.</em></h2>
-      <p class="contact__note" data-reveal>One conversation to understand your space, your pace and your way of living.</p>
-      <div class="contact__actions" data-reveal>
-        <a class="btn" href="mailto:Simran.siriskar@gmail.com">Write to us</a>
-        <a class="link-arrow" href="tel:+919764871793">+91 97648 71793</a>
-      </div>
+      <p class="contact__note" data-reveal>Tell us a little about your space — Simran will write back to set up a first conversation.</p>
+      <form class="form" action="https://formsubmit.co/Simran.siriskar@gmail.com" method="POST" data-reveal>
+        <input type="hidden" name="_subject" value="New enquiry — Svay Studio website">
+        <input type="hidden" name="_next" value="https://mauryagovind045-star.github.io/svay-website/thanks.html">
+        <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="f-city">City</label>
+          <input id="f-city" name="city" type="text" placeholder="Goa, Mumbai…">
+        </div>
+        <div class="field field--wide">
+          <label for="f-type">What you’re looking for</label>
+          <select id="f-type" name="project_type">
+            <option>Design consultancy</option>
+            <option>Turnkey project</option>
+            <option>Furniture design</option>
+            <option selected>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field field--wide">
+          <label for="f-msg">About your space</label>
+          <textarea id="f-msg" name="message" rows="4" required placeholder="A 3BHK in Assagao; we love arches and quiet colours…"></textarea>
+        </div>
+        <div class="form__submit">
+          <button class="btn" type="submit">Send enquiry</button>
+        </div>
+      </form>
+      <p class="contact__direct" data-reveal>Or directly —
+        <a href="mailto:Simran.siriskar@gmail.com">Simran.siriskar@gmail.com</a>&ensp;·&ensp;<a href="tel:+919764871793">+91 97648 71793</a>
+      </p>
     </section>
 
   </main>
@@ -237,7 +273,7 @@
       </div>
       <div>
         <p class="eyebrow eyebrow--light">Follow</p>
-        <p><a href="#" data-instagram>Instagram</a></p>
+        <p><a href="https://www.instagram.com/svay.studio/" target="_blank" rel="noopener">Instagram</a></p>
       </div>
     </div>
     <p class="site-foot__legal">© 2026 Svay Studio. All rights reserved.</p>
