@@ -474,79 +474,155 @@ button:focus-visible {
    Contact
    ================================================================ */
 .contact {
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+  background: var(--espresso);
+  color: var(--ivory);
   padding: var(--section-gap) var(--gutter);
 }
+.contact .section-title { color: var(--ivory); }
 .contact__note {
-  margin-top: 1.75rem;
-  color: rgba(70, 57, 44, 0.75);
+  margin-top: 1.5rem;
+  max-width: 30em;
+  color: rgba(244, 239, 230, 0.75);
+}
+.contact__info {
+  list-style: none;
+  margin-top: 2.75rem;
+  max-width: 30em;
+}
+.contact__info li {
+  border-top: 1px solid var(--line-light);
+  padding: 1.35rem 0;
+}
+.contact__label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teak);
+  margin-bottom: 0.55rem;
+}
+.contact__label::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--teak);
+  transform: rotate(45deg);
+  margin-right: 0.7rem;
+  vertical-align: 1px;
+}
+.contact__info p {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.contact__info a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
-/* Enquiry form */
+/* Enquiry panel */
+.contact__panel {
+  background: rgba(244, 239, 230, 0.035);
+  border: 1px solid var(--line-light);
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+}
+.contact__panel-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+.contact__panel-sub {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: rgba(244, 239, 230, 0.65);
+}
 .form {
-  max-width: 44rem;
-  margin: 3.5rem auto 0;
+  margin-top: 2.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.2rem 2.75rem;
+  gap: 1.5rem 1.4rem;
   text-align: left;
 }
 .form__honey { display: none; }
 .field {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 0.7rem;
-  transition: border-color 0.25s ease;
+  gap: 0.5rem;
 }
-.field:focus-within { border-color: var(--olive); }
 .field label {
-  font-size: 0.65rem;
+  font-size: 0.64rem;
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--olive);
+  color: rgba(244, 239, 230, 0.6);
 }
+.field .req { color: var(--teak); margin-left: 0.2em; }
 .field input,
 .field select,
 .field textarea {
-  border: 0;
-  background: transparent;
+  border: 1px solid rgba(244, 239, 230, 0.22);
+  border-radius: 2px;
+  background: rgba(244, 239, 230, 0.05);
   font-family: var(--sans);
-  font-size: 1rem;
-  color: var(--umber);
-  padding: 0.15rem 0;
+  font-size: 0.95rem;
+  color: var(--ivory);
+  padding: 0.85rem 1rem;
+  transition: border-color 0.25s ease;
 }
 .field input:focus,
 .field select:focus,
-.field textarea:focus { outline: none; }
-.field ::placeholder { color: rgba(70, 57, 44, 0.35); }
-.field textarea { resize: vertical; min-height: 5.5rem; }
+.field textarea:focus {
+  outline: none;
+  border-color: var(--teak);
+}
+.field ::placeholder { color: rgba(244, 239, 230, 0.35); }
+.field textarea { resize: vertical; min-height: 7rem; }
 .field select {
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%237C6C4E' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A98963' stroke-width='1.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.25rem center;
-  padding-right: 1.5rem;
+  background-position: right 1rem center;
+  padding-right: 2.4rem;
   cursor: pointer;
 }
 .field--wide { grid-column: 1 / -1; }
 .form__submit {
   grid-column: 1 / -1;
+  margin-top: 0.35rem;
+}
+.btn--panel {
+  width: 100%;
+  border-radius: 2px;
+  background: var(--teak);
+  color: var(--espresso);
+  letter-spacing: 0.2em;
+}
+.btn--panel:hover { background: #BA9C74; }
+.form__privacy {
+  margin-top: 1rem;
+  font-size: 0.72rem;
   text-align: center;
-  margin-top: 0.75rem;
+  color: rgba(244, 239, 230, 0.45);
 }
-.contact__direct {
-  margin-top: 2.75rem;
-  font-size: 0.85rem;
-  color: rgba(70, 57, 44, 0.7);
+
+/* Thanks page */
+.thanks {
+  text-align: center;
+  padding: clamp(9rem, 22vh, 13rem) var(--gutter) var(--section-gap);
+  min-height: 60vh;
 }
-.contact__direct a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+.thanks__note {
+  margin-top: 1.75rem;
+  color: rgba(70, 57, 44, 0.75);
 }
+.thanks .btn { margin-top: 2.5rem; }
 
 /* ================================================================
    Footer
@@ -613,6 +689,7 @@ button:focus-visible {
   .reality { grid-template-columns: 1fr; }
   .founder { grid-template-columns: 1fr; }
   .founder__media { justify-self: center; }
+  .contact { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
