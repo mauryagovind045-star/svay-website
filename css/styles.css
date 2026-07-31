@@ -647,6 +647,11 @@ button:focus-visible {
   padding: clamp(9rem, 22vh, 13rem) var(--gutter) var(--section-gap);
   min-height: 60vh;
 }
+.thanks__mark {
+  height: 64px;
+  width: auto;
+  margin: 0 auto 1.5rem;
+}
 .thanks__note {
   margin-top: 1.75rem;
   color: rgba(70, 57, 44, 0.75);
