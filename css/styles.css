@@ -330,6 +330,35 @@ button:focus-visible {
   padding: var(--section-gap) var(--gutter);
   border-top: 1px solid var(--line);
 }
+.project-set { margin-top: clamp(3.5rem, 8vh, 6rem); }
+.project-set:first-of-type { margin-top: 0; }
+.project-set__head {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.4rem;
+  margin-bottom: clamp(1.5rem, 3.5vh, 2.5rem);
+}
+.project-set__num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--teak);
+}
+.project-set__title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+.project-set__desc {
+  margin-left: auto;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--olive);
+  text-align: right;
+}
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -457,7 +486,7 @@ button:focus-visible {
   border-radius: 999px 999px 0 0;
   overflow: hidden;
 }
-.founder__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.founder__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 62%; }
 .founder__text > p:not(.eyebrow) {
   margin-top: 1.5rem;
   max-width: 32em;
@@ -662,6 +691,33 @@ button:focus-visible {
 }
 
 /* ================================================================
+   WhatsApp float
+   ================================================================ */
+.wa-float {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 50;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 24px rgba(38, 32, 26, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.wa-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(38, 32, 26, 0.34);
+}
+.wa-float svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+/* ================================================================
    Reveal on scroll
    ================================================================ */
 @media (prefers-reduced-motion: no-preference) {
@@ -697,6 +753,8 @@ button:focus-visible {
   .hero__media { height: min(84vh, 680px); }
   .hero__tag { font-size: 0.74rem; top: 45%; }
   .form { grid-template-columns: 1fr; gap: 1.9rem; }
+  .project-set__head { flex-wrap: wrap; gap: 0.6rem 1.25rem; }
+  .project-set__desc { margin-left: 0; width: 100%; text-align: left; }
   .stage { grid-template-columns: 3rem 1fr; }
   .stage__time { grid-column: 2; }
   .site-foot__cols { grid-template-columns: 1fr; }
