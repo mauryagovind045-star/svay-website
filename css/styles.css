@@ -235,12 +235,12 @@ button:focus-visible {
   display: inline-block;
   transform: translateY(0.35em);
   opacity: 0;
-  animation: word-rise 0.9s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
+  animation: word-rise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
 }
-.hero__word span:nth-child(1) { animation-delay: 0.05s; }
-.hero__word span:nth-child(2) { animation-delay: 0.13s; }
-.hero__word span:nth-child(3) { animation-delay: 0.21s; }
-.hero__word span:nth-child(4) { animation-delay: 0.29s; }
+.hero__word span:nth-child(1) { animation-delay: 0.1s; }
+.hero__word span:nth-child(2) { animation-delay: 0.25s; }
+.hero__word span:nth-child(3) { animation-delay: 0.4s; }
+.hero__word span:nth-child(4) { animation-delay: 0.55s; }
 @keyframes word-rise {
   to { transform: translateY(0); opacity: 1; }
 }
