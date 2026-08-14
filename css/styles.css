@@ -522,6 +522,20 @@ button:focus-visible {
   gap: 1.9rem;
   margin-top: 2.4rem;
 }
+.pgallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin-top: clamp(3rem, 8vh, 5rem);
+}
+.pgallery figure:first-child { grid-column: 1 / -1; }
+.pgallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.pgallery figure:first-child img { aspect-ratio: 16 / 9; }
 
 /* ================================================================
    Design to reality (dark band)
@@ -894,6 +908,7 @@ button:focus-visible {
 @media (max-width: 900px) {
   .services__grid { grid-template-columns: 1fr; }
   .pdetail__grid { grid-template-columns: 1fr; }
+  .pgallery { grid-template-columns: 1fr; }
   .projects__grid { grid-template-columns: repeat(2, 1fr); }
   .reality { grid-template-columns: 1fr; }
   .founder { grid-template-columns: 1fr; }
