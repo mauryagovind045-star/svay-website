@@ -522,20 +522,91 @@ button:focus-visible {
   gap: 1.9rem;
   margin-top: 2.4rem;
 }
-.pgallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(1rem, 2.5vw, 2rem);
+/* Project gallery slider — images keep their own proportions, never cropped */
+.pslider {
+  --slide-h: min(68vh, 620px);
+  --slide-w: min(88vw, 1040px);
   margin-top: clamp(3rem, 8vh, 5rem);
 }
-.pgallery figure:first-child { grid-column: 1 / -1; }
-.pgallery img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+.pslider__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
 }
-.pgallery figure:first-child img { aspect-ratio: 16 / 9; }
+.pslider__track::-webkit-scrollbar { display: none; }
+.pslider__track:focus-visible { outline: 1px solid var(--teak); outline-offset: 6px; }
+.pslider__slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  height: var(--slide-h);
+}
+.pslider__slide img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: var(--slide-h);
+  max-width: var(--slide-w);
+  object-fit: contain;
+}
+.pslider__bar {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: clamp(1.25rem, 3vh, 2rem);
+}
+.pslider__nav { display: flex; gap: 0.6rem; }
+.pslider__btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: none;
+  color: var(--umber);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+.pslider__btn svg { width: 1rem; height: 1rem; }
+.pslider__btn:hover:not(:disabled) {
+  background: var(--umber);
+  border-color: var(--umber);
+  color: var(--ivory);
+}
+.pslider__btn:disabled { opacity: 0.3; cursor: default; }
+.pslider__progress {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  overflow: hidden;
+}
+.pslider__progress span {
+  display: block;
+  height: 100%;
+  background: var(--teak);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.pslider__count {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--olive);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pslider__track { scroll-behavior: auto; }
+}
 
 /* ================================================================
    Design to reality (dark band)
@@ -908,7 +979,6 @@ button:focus-visible {
 @media (max-width: 900px) {
   .services__grid { grid-template-columns: 1fr; }
   .pdetail__grid { grid-template-columns: 1fr; }
-  .pgallery { grid-template-columns: 1fr; }
   .projects__grid { grid-template-columns: repeat(2, 1fr); }
   .reality { grid-template-columns: 1fr; }
   .founder { grid-template-columns: 1fr; }
@@ -918,6 +988,8 @@ button:focus-visible {
 
 /* Mobile drawer navigation */
 @media (max-width: 700px) {
+  .pslider { --slide-h: min(58vh, 480px); --slide-w: 86vw; }
+  .pslider__btn { width: 2.5rem; height: 2.5rem; }
   .site-head {
     flex-direction: row;
     justify-content: space-between;
