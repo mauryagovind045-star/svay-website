@@ -11,18 +11,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=11">
+  <link rel="stylesheet" href="/css/styles.css?v=15">
 </head>
 <body class="page-light">
 
   <header class="site-head">
     <a class="site-head__brand" href="/"><img src="/assets/img/logo-lockup-dark.png" alt="Svay Studio"></a>
-    <nav class="site-head__nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+    <nav class="site-head__nav" id="site-nav" aria-label="Primary">
       <a href="/projects/">Projects</a>
       <a href="/#studio">Studio</a>
       <a href="/#journey">Journey</a>
       <a href="/#contact">Contact</a>
     </nav>
+    <div class="nav-backdrop"></div>
   </header>
 
   <main>
@@ -60,5 +64,6 @@
     <div class="wordmark site-foot__word" aria-hidden="true">SVAY</div>
   </footer>
 
+  <script src="/js/main.js?v=13"></script>
 </body>
 </html>
