@@ -608,6 +608,21 @@ button:focus-visible {
   .pslider__track { scroll-behavior: auto; }
 }
 
+/* Slider sitting in the detail column: exactly one image per view */
+.pslider--inline {
+  --slide-h: min(66vh, 640px);
+  margin-top: 0;
+}
+.pslider--inline .pslider__track { gap: 0; }
+.pslider--inline .pslider__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  align-items: center;
+}
+.pslider--inline .pslider__slide img { max-width: 100%; }
+
+
 /* ================================================================
    Design to reality (dark band)
    ================================================================ */
@@ -989,6 +1004,7 @@ button:focus-visible {
 /* Mobile drawer navigation */
 @media (max-width: 700px) {
   .pslider { --slide-h: min(58vh, 480px); --slide-w: 86vw; }
+  .pslider--inline { --slide-h: min(58vh, 480px); }
   .pslider__btn { width: 2.5rem; height: 2.5rem; }
   .site-head {
     flex-direction: row;

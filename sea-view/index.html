@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=15">
+  <link rel="stylesheet" href="/css/styles.css?v=17">
 </head>
 <body class="page-light">
 
@@ -35,9 +35,60 @@
       <h1 class="section-title">Sea View <em>3BHK Apartment</em></h1>
       <p class="pdetail__intro">A three-bedroom apartment opened up to light, breeze and the sea beyond.</p>
       <div class="pdetail__grid">
-        <figure class="pdetail__media">
-          <img src="/assets/img/portfolio/sea-view.jpg" alt="Sea view apartment living room in soft daylight with airy curtains">
-        </figure>
+        <div class="pslider pslider--inline" data-slider>
+          <div class="pslider__track" data-slider-track tabindex="0" role="region" aria-label="Sea View apartment gallery">
+            <figure class="pslider__slide">
+              <img src="/assets/img/portfolio/sea-view/living.jpg" alt="Open living room with striped daybed, cane bar stools and warm white walls" width="1600" height="1066" loading="eager" decoding="async">
+            </figure>
+            <figure class="pslider__slide">
+              <img src="/assets/img/portfolio/sea-view/dining.jpg" alt="Dining corner with cane-backed chairs and woven pendant lights" width="1600" height="1066" loading="eager" decoding="async">
+            </figure>
+            <figure class="pslider__slide">
+              <img src="/assets/img/portfolio/sea-view/bedroom-rose.jpg" alt="Bedroom with arched rose headboard and soft daylight through sheer curtains" width="1600" height="1066" loading="lazy" decoding="async">
+            </figure>
+            <figure class="pslider__slide">
+              <img src="/assets/img/portfolio/sea-view/bedroom-cane.jpg" alt="Guest bedroom with cane headboard and brass goldfish wall detail" width="1600" height="1066" loading="lazy" decoding="async">
+            </figure>
+            <figure class="pslider__slide">
+              <img src="/assets/img/portfolio/sea-view/bedroom-poster.jpg" alt="Four-poster bedroom looking out to greenery and the water beyond" width="1600" height="1066" loading="lazy" decoding="async">
+            </figure>
+            <figure class="pslider__slide">
+              <img src="/assets/img/portfolio/sea-view/dressing.jpg" alt="Dressing corner with carved mirror, cane wardrobe and console" width="1600" height="1066" loading="lazy" decoding="async">
+            </figure>
+            <figure class="pslider__slide">
+              <img src="/assets/img/portfolio/sea-view/bath.jpg" alt="Marble bathroom with freestanding tub, candles and brass fittings" width="1600" height="1066" loading="lazy" decoding="async">
+            </figure>
+          <figure class="pslider__slide">
+            <img src="/assets/img/portfolio/sea-view/tv-wall.jpg" alt="Living room television set into an arched black frame, with open shelving and a striped bench" width="1012" height="1800" loading="lazy" decoding="async">
+          </figure>
+          <figure class="pslider__slide">
+            <img src="/assets/img/portfolio/sea-view/bar-counter.jpg" alt="Breakfast counter in oxblood timber with cane-seated stools against the daylit balcony" width="1200" height="1800" loading="lazy" decoding="async">
+          </figure>
+          <figure class="pslider__slide">
+            <img src="/assets/img/portfolio/sea-view/dining-wide.jpg" alt="Dining table and cane chairs beneath the woven pendants, seen across the marble floor" width="1200" height="1800" loading="lazy" decoding="async">
+          </figure>
+          <figure class="pslider__slide">
+            <img src="/assets/img/portfolio/sea-view/bedroom-rose-wide.jpg" alt="Rose bedroom looking towards the brass-fronted wardrobe and patterned rug" width="1199" height="1800" loading="lazy" decoding="async">
+          </figure>
+          <figure class="pslider__slide">
+            <img src="/assets/img/portfolio/sea-view/bedroom-poster-wardrobe.jpg" alt="Four-poster bedroom with cane-fronted wardrobes and an arched cane wall panel" width="1800" height="1200" loading="lazy" decoding="async">
+          </figure>
+          <figure class="pslider__slide">
+            <img src="/assets/img/portfolio/sea-view/bedroom-poster-detail.jpg" alt="Charcoal bedding and block-printed cushions on the black four-poster bed" width="1200" height="1800" loading="lazy" decoding="async">
+          </figure>
+          <figure class="pslider__slide">
+            <img src="/assets/img/portfolio/sea-view/bedroom-poster-cane.jpg" alt="Black four-poster bed beside a cane wall panel and cane-fronted wardrobes" width="1440" height="1800" loading="lazy" decoding="async">
+          </figure>
+          </div>
+          <div class="pslider__bar">
+            <div class="pslider__nav">
+              <button class="pslider__btn" type="button" data-slider-prev aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <button class="pslider__btn" type="button" data-slider-next aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+            <div class="pslider__progress" aria-hidden="true"><span data-slider-fill></span></div>
+            <p class="pslider__count"><span data-slider-current>01</span> / 14</p>
+          </div>
+        </div>
         <div class="pdetail__info">
           <dl class="pdetail__facts">
             <div><dt>Location</dt><dd>Porvorim, Goa</dd></div>
@@ -53,39 +104,6 @@
             <a class="btn" href="/#contact">Begin your project</a>
             <a class="link-arrow" href="/projects/">All projects</a>
           </div>
-        </div>
-      </div>
-      <div class="pslider" data-slider>
-        <div class="pslider__track" data-slider-track tabindex="0" role="region" aria-label="Sea View apartment gallery">
-          <figure class="pslider__slide">
-            <img src="/assets/img/portfolio/sea-view/living.jpg" alt="Open living room with striped daybed, cane bar stools and warm white walls" width="1600" height="1066" loading="eager" decoding="async">
-          </figure>
-          <figure class="pslider__slide">
-            <img src="/assets/img/portfolio/sea-view/dining.jpg" alt="Dining corner with cane-backed chairs and woven pendant lights" width="1600" height="1066" loading="eager" decoding="async">
-          </figure>
-          <figure class="pslider__slide">
-            <img src="/assets/img/portfolio/sea-view/bedroom-rose.jpg" alt="Bedroom with arched rose headboard and soft daylight through sheer curtains" width="1600" height="1066" loading="lazy" decoding="async">
-          </figure>
-          <figure class="pslider__slide">
-            <img src="/assets/img/portfolio/sea-view/bedroom-cane.jpg" alt="Guest bedroom with cane headboard and brass goldfish wall detail" width="1600" height="1066" loading="lazy" decoding="async">
-          </figure>
-          <figure class="pslider__slide">
-            <img src="/assets/img/portfolio/sea-view/bedroom-poster.jpg" alt="Four-poster bedroom looking out to greenery and the water beyond" width="1600" height="1066" loading="lazy" decoding="async">
-          </figure>
-          <figure class="pslider__slide">
-            <img src="/assets/img/portfolio/sea-view/dressing.jpg" alt="Dressing corner with carved mirror, cane wardrobe and console" width="1600" height="1066" loading="lazy" decoding="async">
-          </figure>
-          <figure class="pslider__slide">
-            <img src="/assets/img/portfolio/sea-view/bath.jpg" alt="Marble bathroom with freestanding tub, candles and brass fittings" width="1600" height="1066" loading="lazy" decoding="async">
-          </figure>
-        </div>
-        <div class="pslider__bar">
-          <div class="pslider__nav">
-            <button class="pslider__btn" type="button" data-slider-prev aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-            <button class="pslider__btn" type="button" data-slider-next aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-          </div>
-          <div class="pslider__progress" aria-hidden="true"><span data-slider-fill></span></div>
-          <p class="pslider__count"><span data-slider-current>01</span> / 07</p>
         </div>
       </div>
     </section>
