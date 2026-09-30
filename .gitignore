@@ -15,3 +15,10 @@ out/
 .DS_Store
 Thumbs.db
 *.log
+
+# Raw camera originals — web-ready copies live in assets/img/
+*.HEIC
+*.heic
+*.MOV
+*.mov
+*.mp4
