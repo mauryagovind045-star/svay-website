@@ -997,6 +997,9 @@ button:focus-visible {
 
 /* Mobile drawer navigation */
 @media (max-width: 700px) {
+  /* Tighter vertical rhythm — two stacked section gaps left too much dead space */
+  :root { --section-gap: clamp(3rem, 7vh, 4.5rem); }
+  .project-set { margin-top: clamp(2.5rem, 5vh, 3.5rem); }
   .pslider { --slide-h: min(58vh, 480px); --slide-w: 86vw; }
   .pslider--inline { --slide-h: min(58vh, 480px); }
   .pslider__btn { width: 2.5rem; height: 2.5rem; }
