@@ -219,7 +219,7 @@ button:focus-visible {
   color: var(--ivory);
   font-family: var(--serif);
   font-weight: 600;
-  font-size: clamp(1.3rem, 3.4vw, 2.4rem);
+  font-size: clamp(1.9rem, 5vw, 4rem);
   line-height: 1;
   letter-spacing: 0.36em;
   text-indent: 0.36em;
