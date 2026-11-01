@@ -212,17 +212,17 @@ button:focus-visible {
 }
 .hero__word {
   position: absolute;
-  bottom: clamp(2rem, 5.5vh, 3.75rem);
+  bottom: -0.045em;
   left: 0;
   right: 0;
   z-index: 2;
   color: var(--ivory);
   font-family: var(--serif);
   font-weight: 600;
-  font-size: clamp(1.9rem, 5vw, 4rem);
-  line-height: 1;
-  letter-spacing: 0.36em;
-  text-indent: 0.36em;
+  font-size: clamp(3.3rem, 13.6vw, 13.3rem);
+  line-height: 0.78;
+  letter-spacing: 0.04em;
+  text-indent: 0.04em;
   text-transform: uppercase;
   text-align: center;
   user-select: none;
