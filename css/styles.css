@@ -926,11 +926,33 @@ button:focus-visible {
   letter-spacing: 0.1em;
   color: rgba(244, 239, 230, 0.45);
 }
-.site-foot__word {
-  color: var(--ivory);
-  margin-top: 1.5rem;
-  margin-bottom: -0.34em;
-  opacity: 0.92;
+.foot-word {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 3.4vw, 2.3rem);
+  line-height: 1;
+  letter-spacing: 0.36em;
+  text-indent: 0.36em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(244, 239, 230, 0.78);
+  user-select: none;
+  margin-top: 2.5rem;
+  padding-bottom: clamp(2rem, 5vh, 3.25rem);
+}
+.foot-word span { display: inline-block; }
+
+/* Staggered letter rise, in view */
+@media (prefers-reduced-motion: no-preference) {
+  .foot-word[data-reveal] { opacity: 1; transform: none; transition: none; }
+  .foot-word span { transform: translateY(0.4em); opacity: 0; }
+  .foot-word.is-visible span {
+    animation: word-rise 1.1s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
+  }
+  .foot-word.is-visible span:nth-child(1) { animation-delay: 0.05s; }
+  .foot-word.is-visible span:nth-child(2) { animation-delay: 0.17s; }
+  .foot-word.is-visible span:nth-child(3) { animation-delay: 0.29s; }
+  .foot-word.is-visible span:nth-child(4) { animation-delay: 0.41s; }
 }
 .site-foot__mark {
   height: 52px;
