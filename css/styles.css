@@ -219,7 +219,7 @@ button:focus-visible {
   color: var(--ivory);
   font-family: var(--serif);
   font-weight: 600;
-  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  font-size: clamp(1.3rem, 3.4vw, 2.4rem);
   line-height: 1;
   letter-spacing: 0.36em;
   text-indent: 0.36em;
@@ -236,9 +236,11 @@ button:focus-visible {
   animation: word-rise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
 }
 .hero__word span:nth-child(1) { animation-delay: 0.1s; }
-.hero__word span:nth-child(2) { animation-delay: 0.25s; }
-.hero__word span:nth-child(3) { animation-delay: 0.4s; }
-.hero__word span:nth-child(4) { animation-delay: 0.55s; }
+.hero__word span:nth-child(2) { animation-delay: 0.22s; }
+.hero__word span:nth-child(3) { animation-delay: 0.34s; }
+.hero__word span:nth-child(4) { animation-delay: 0.46s; }
+.hero__word span:nth-child(5) { animation-delay: 0.58s; }
+.hero__word span:nth-child(6) { animation-delay: 0.7s; }
 @keyframes word-rise {
   to { transform: translateY(0); opacity: 1; }
 }
