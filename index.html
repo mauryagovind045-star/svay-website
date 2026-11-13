@@ -11,12 +11,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Archivo:wght@400;500&family=Noto+Serif+Devanagari:wght@400&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/img/hero-banner.webp"
+        imagesrcset="/assets/img/hero-banner-1200.webp 1200w, /assets/img/hero-banner-1800.webp 1800w, /assets/img/hero-banner.webp 2400w"
+        imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/css/styles.css?v=25">
 </head>
 <body>
 
   <header class="site-head">
-    <a class="site-head__brand" href="#top"><img src="/assets/img/logo-lockup-ivory.png" alt="Svay Studio"></a>
+    <a class="site-head__brand" href="#top"><img width="918" height="390" src="/assets/img/logo-lockup-ivory.webp" alt="Svay Studio"></a>
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span>
     </button>
@@ -35,7 +38,12 @@
     <!-- ================= HERO ================= -->
     <section class="hero">
       <figure class="hero__media">
-        <img src="/assets/img/hero-banner.jpg" alt="Serene living room by Svay Studio — deep-green sofa, cream armchairs and arched wall panelling in soft daylight" fetchpriority="high">
+        <img width="2400" height="1599" src="/assets/img/hero-banner.webp"
+             srcset="/assets/img/hero-banner-1200.webp 1200w,
+                     /assets/img/hero-banner-1800.webp 1800w,
+                     /assets/img/hero-banner.webp 2400w"
+             sizes="100vw"
+             alt="Serene living room by Svay Studio — deep-green sofa, cream armchairs and arched wall panelling in soft daylight" fetchpriority="high">
       </figure>
       <p class="hero__tag">Interiors that begin with <em>Self</em> — serene, deeply personal spaces<br>
       designed and built across India.</p>
@@ -117,19 +125,19 @@
         </div>
         <div class="projects__grid">
           <figure class="tile tile--arch" data-reveal>
-            <img src="/assets/img/vine-arch.jpg" alt="Arched passage hand-painted with trailing vines, dining room beyond" loading="lazy">
+            <img width="600" height="900" src="/assets/img/vine-arch.webp" alt="Arched passage hand-painted with trailing vines, dining room beyond" loading="lazy">
             <figcaption>The Vine Arch</figcaption>
           </figure>
           <figure class="tile" data-reveal>
-            <img src="/assets/img/four-poster.jpg" alt="Wooden four-poster bed against a hand-painted tree mural" loading="lazy">
+            <img width="900" height="600" src="/assets/img/four-poster.webp" alt="Wooden four-poster bed against a hand-painted tree mural" loading="lazy">
             <figcaption>Four-Poster Suite</figcaption>
           </figure>
           <figure class="tile tile--arch" data-reveal>
-            <img src="/assets/img/corridor.jpg" alt="Heritage corridor with brass pendant lights and patterned tiles" loading="lazy">
+            <img width="600" height="900" src="/assets/img/corridor.webp" alt="Heritage corridor with brass pendant lights and patterned tiles" loading="lazy">
             <figcaption>Heritage Corridor</figcaption>
           </figure>
           <figure class="tile" data-reveal>
-            <img src="/assets/img/twin-beds.jpg" alt="Twin bedroom with scalloped sage headboard and cane wardrobes" loading="lazy">
+            <img width="900" height="600" src="/assets/img/twin-beds.webp" alt="Twin bedroom with scalloped sage headboard and cane wardrobes" loading="lazy">
             <figcaption>Twin Room in Sage</figcaption>
           </figure>
         </div>
@@ -143,19 +151,19 @@
         </div>
         <div class="projects__grid">
           <figure class="tile tile--arch" data-reveal>
-            <img src="/assets/img/g-rattan-dining.jpg" alt="Dining table under a wide rattan pendant beside an arched mirror console" loading="lazy">
+            <img width="900" height="1351" src="/assets/img/g-rattan-dining.webp" alt="Dining table under a wide rattan pendant beside an arched mirror console" loading="lazy">
             <figcaption>The Rattan Pendant</figcaption>
           </figure>
           <figure class="tile" data-reveal>
-            <img src="/assets/img/g-green-room.jpg" alt="Deep-green sofa and cream armchair beneath arched wall panelling" loading="lazy">
+            <img width="900" height="1351" src="/assets/img/g-green-room.webp" alt="Deep-green sofa and cream armchair beneath arched wall panelling" loading="lazy">
             <figcaption>The Green Room</figcaption>
           </figure>
           <figure class="tile tile--arch" data-reveal>
-            <img src="/assets/img/g-bar-niche.jpg" alt="Arched bar niche in dark wood with warm-lit shelving" loading="lazy">
+            <img width="900" height="1351" src="/assets/img/g-bar-niche.webp" alt="Arched bar niche in dark wood with warm-lit shelving" loading="lazy">
             <figcaption>The Bar Niche</figcaption>
           </figure>
           <figure class="tile" data-reveal>
-            <img src="/assets/img/g-quiet-kitchen.jpg" alt="Black and white kitchen with arched open shelf and rattan pendant" loading="lazy">
+            <img width="900" height="1351" src="/assets/img/g-quiet-kitchen.webp" alt="Black and white kitchen with arched open shelf and rattan pendant" loading="lazy">
             <figcaption>The Quiet Kitchen</figcaption>
           </figure>
         </div>
@@ -169,19 +177,19 @@
         </div>
         <div class="projects__grid">
           <figure class="tile tile--arch" data-reveal>
-            <img src="/assets/img/yellow-arch.jpg" alt="Bold yellow arch niche framing a brown sofa" loading="lazy">
+            <img width="832" height="1248" src="/assets/img/yellow-arch.webp" alt="Bold yellow arch niche framing a brown sofa" loading="lazy">
             <figcaption>A Yellow Moment</figcaption>
           </figure>
           <figure class="tile" data-reveal>
-            <img src="/assets/img/terracotta-bedroom.jpg" alt="Bedroom with curved terracotta headboard wall and striped ceiling border" loading="lazy">
+            <img width="832" height="1248" src="/assets/img/terracotta-bedroom.webp" alt="Bedroom with curved terracotta headboard wall and striped ceiling border" loading="lazy">
             <figcaption>The Terracotta Bedroom</figcaption>
           </figure>
           <figure class="tile tile--arch" data-reveal>
-            <img src="/assets/img/g-striped-dresser.jpg" alt="Dresser and arched mirror beneath a black-and-white striped ceiling" loading="lazy">
+            <img width="832" height="1248" src="/assets/img/g-striped-dresser.webp" alt="Dresser and arched mirror beneath a black-and-white striped ceiling" loading="lazy">
             <figcaption>The Striped Dresser</figcaption>
           </figure>
           <figure class="tile" data-reveal>
-            <img src="/assets/img/kitchen.jpg" alt="Dark fluted kitchen island with stone counter" loading="lazy">
+            <img width="800" height="1200" src="/assets/img/kitchen.webp" alt="Dark fluted kitchen island with stone counter" loading="lazy">
             <figcaption>The Dark Kitchen</figcaption>
           </figure>
         </div>
@@ -197,7 +205,7 @@
       </div>
       <div class="portfolio__grid">
         <a class="pcard" data-reveal href="/villa-bonita/">
-          <figure class="pcard__media"><img src="/assets/img/portfolio/villa-bonita.jpg" alt="Villa Bonita living space with warm neutral palette" loading="lazy"></figure>
+          <figure class="pcard__media"><img width="758" height="1024" src="/assets/img/portfolio/villa-bonita.webp" alt="Villa Bonita living space with warm neutral palette" loading="lazy"></figure>
           <div class="pcard__body">
             <p class="pcard__meta">Pilerne, Goa · 2025</p>
             <h3 class="pcard__title">Villa Bonita — Models Evora</h3>
@@ -206,7 +214,7 @@
           </div>
         </a>
         <a class="pcard" data-reveal href="/casa-aurea/">
-          <figure class="pcard__media"><img src="/assets/img/portfolio/casa-aurea-wide.jpg" alt="Casa Aurea living corner with brass shelves on a terracotta-striped wall, teak sideboard and blue armchairs" loading="lazy"></figure>
+          <figure class="pcard__media"><img width="1120" height="1400" src="/assets/img/portfolio/casa-aurea-wide.webp" alt="Casa Aurea living corner with brass shelves on a terracotta-striped wall, teak sideboard and blue armchairs" loading="lazy"></figure>
           <div class="pcard__body">
             <p class="pcard__meta">Siolim, Goa</p>
             <h3 class="pcard__title">Casa Aurea</h3>
@@ -215,7 +223,7 @@
           </div>
         </a>
         <a class="pcard" data-reveal href="/whiskey-rasam/">
-          <figure class="pcard__media"><img src="/assets/img/portfolio/whiskey-rasam.jpg" alt="Whiskey Rasam restaurant interior in rust and brass" loading="lazy"></figure>
+          <figure class="pcard__media"><img width="758" height="1024" src="/assets/img/portfolio/whiskey-rasam.webp" alt="Whiskey Rasam restaurant interior in rust and brass" loading="lazy"></figure>
           <div class="pcard__body">
             <p class="pcard__meta">Porvorim, Goa · 2023</p>
             <h3 class="pcard__title">Whiskey Rasam</h3>
@@ -224,7 +232,7 @@
           </div>
         </a>
         <a class="pcard" data-reveal href="/sea-view/">
-          <figure class="pcard__media"><img src="/assets/img/portfolio/sea-view-living.jpg" alt="Luxe Upper Crest living room with a striped sofa, lacquered console and the sea-facing balcony beyond" loading="lazy"></figure>
+          <figure class="pcard__media"><img width="1120" height="1400" src="/assets/img/portfolio/sea-view-living.webp" alt="Luxe Upper Crest living room with a striped sofa, lacquered console and the sea-facing balcony beyond" loading="lazy"></figure>
           <div class="pcard__body">
             <p class="pcard__meta">Porvorim, Goa · 2024</p>
             <h3 class="pcard__title">Luxe Upper Crest — 3BHK Sea Facing Apartment</h3>
@@ -248,8 +256,8 @@
         <a class="link-arrow link-arrow--light" href="#journey">Walk the journey</a>
       </div>
       <div class="reality__media" data-reveal>
-        <figure><img src="/assets/img/furniture-cabinet.jpg" alt="Black fluted wall cabinet above an organic-form wooden coffee table" loading="lazy"></figure>
-        <figure><img src="/assets/img/furniture-detail.jpg" alt="Detail of a wooden console with hand-turned spiral legs" loading="lazy"></figure>
+        <figure><img width="1100" height="1650" src="/assets/img/furniture-cabinet.webp" alt="Black fluted wall cabinet above an organic-form wooden coffee table" loading="lazy"></figure>
+        <figure><img width="1100" height="1650" src="/assets/img/furniture-detail.webp" alt="Detail of a wooden console with hand-turned spiral legs" loading="lazy"></figure>
       </div>
     </section>
 
@@ -307,7 +315,7 @@
     <!-- ================= FOUNDER ================= -->
     <section class="founder">
       <figure class="founder__media" data-reveal>
-        <img src="/assets/img/founder-window.jpg" alt="Simran Siriskar arranging a tea tray by an open window, palms and greenery beyond" loading="lazy">
+        <img width="1200" height="1800" src="/assets/img/founder-window.webp" alt="Simran Siriskar arranging a tea tray by an open window, palms and greenery beyond" loading="lazy">
       </figure>
       <div class="founder__text" data-reveal>
         <p class="eyebrow eyebrow--light">The founder</p>
@@ -391,7 +399,7 @@
   <footer class="site-foot">
     <div class="site-foot__cols">
       <div>
-        <img class="site-foot__mark" src="/assets/img/logo-monogram-ivory.png" alt="">
+        <img width="394" height="334" class="site-foot__mark" src="/assets/img/logo-monogram-ivory.webp" alt="">
         <p class="eyebrow eyebrow--light">Svay Studio</p>
         <p>Interior design studio<br>Goa · Mumbai, India</p>
       </div>
